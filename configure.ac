@@ -269,13 +269,14 @@ AC_CHECK_DECLS([ns_t_invalid], [], [], [[
 	#endif
 	]])
 
+AC_CHECK_FUNCS([dn_expand])
 AC_CHECK_FUNCS([ftruncate gethostname memmove memset socket])
 AC_CHECK_FUNCS([strchr strcspn strdup strerror])
 AC_CHECK_FUNCS([strcasecmp strncasecmp strspn strtoul])
 AC_CHECK_FUNCS([gethostbyname inet_ntoa select strrchr strstr strtol])
 
 AC_REPLACE_FUNCS([getopt_long_only strncasecmp])
-AC_REPLACE_FUNCS([__ns_initparse __ns_name_uncompress __ns_msg_getflag])
+AC_REPLACE_FUNCS([__ns_initparse __ns_name_uncompress __ns_msg_getflag __dn_skipname])
 dnl Magnus Holmgren says this avoids linking a private function
 AC_LIBOBJ([__ns_get16])
 

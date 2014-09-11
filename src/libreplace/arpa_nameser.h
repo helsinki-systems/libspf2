@@ -59,7 +59,7 @@
 #  define __P(x) x
 #endif
 
-#if defined( HAVE_ARPA_NAMESER_H ) && defined( HAVE_NS_TYPE )
+#if !defined(HAVE_DN_EXPAND) && defined( HAVE_ARPA_NAMESER_H ) && defined( HAVE_NS_TYPE )
 #define dn_expand		__dn_expand
 int		dn_expand __P((const u_char *, const u_char *, const u_char *,
 			       char *, int));
